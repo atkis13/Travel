@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace Travel
 {
-    public partial class frm_main : Form
+    public partial class frm_add_dest : Form
     {
-        public frm_main()
+        public frm_add_dest()
         {
             InitializeComponent();
-        }
-
-        
-
-       
-        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
