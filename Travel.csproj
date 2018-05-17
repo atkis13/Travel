@@ -59,6 +59,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Form_Methods.cs" />
+    <Compile Include="frm_add_dest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_add_dest.Designer.cs">
+      <DependentUpon>frm_add_dest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_complete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_complete.Designer.cs">
+      <DependentUpon>frm_complete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_housing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_housing.Designer.cs">
+      <DependentUpon>frm_housing.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,14 +90,38 @@
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_routes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_routes.Designer.cs">
+      <DependentUpon>frm_routes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="frm_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_view.Designer.cs">
+      <DependentUpon>frm_view.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_add_dest.resx">
+      <DependentUpon>frm_add_dest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_complete.resx">
+      <DependentUpon>frm_complete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_housing.resx">
+      <DependentUpon>frm_housing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_routes.resx">
+      <DependentUpon>frm_routes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +132,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_view.resx">
+      <DependentUpon>frm_view.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

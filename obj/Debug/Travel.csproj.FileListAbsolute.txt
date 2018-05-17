@@ -13,3 +13,8 @@ e:\Git\Travel\Travel\bin\Debug\Google.Protobuf.xml
 e:\Git\Travel\Travel\bin\Debug\MySql.Data.xml
 e:\Git\Travel\Travel\obj\Debug\Travel.exe
 e:\Git\Travel\Travel\obj\Debug\Travel.pdb
+E:\Git\Travel\Travel\obj\Debug\Travel.frm_add_dest.resources
+E:\Git\Travel\Travel\obj\Debug\Travel.frm_complete.resources
+E:\Git\Travel\Travel\obj\Debug\Travel.frm_housing.resources
+E:\Git\Travel\Travel\obj\Debug\Travel.frm_routes.resources
+E:\Git\Travel\Travel\obj\Debug\Travel.frm_view.resources
