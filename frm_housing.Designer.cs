@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmb_id = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.txt_cost = new System.Windows.Forms.TextBox();
+            this.txt_housing_loc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.date_out = new System.Windows.Forms.DateTimePicker();
+            this.date_in = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // cmb_id
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(161, 146);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(143, 24);
-            this.comboBox2.TabIndex = 28;
+            this.cmb_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_id.FormattingEnabled = true;
+            this.cmb_id.Location = new System.Drawing.Point(161, 146);
+            this.cmb_id.Name = "cmb_id";
+            this.cmb_id.Size = new System.Drawing.Size(143, 24);
+            this.cmb_id.TabIndex = 28;
             // 
             // label6
             // 
@@ -74,41 +74,41 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Add Housing";
             // 
-            // button2
+            // btn_close
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(215, 416);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 27);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_close.Location = new System.Drawing.Point(215, 416);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(76, 27);
+            this.btn_close.TabIndex = 25;
+            this.btn_close.Text = "Close";
+            this.btn_close.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_add
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(107, 416);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 27);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Add Route";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.Location = new System.Drawing.Point(107, 416);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(76, 27);
+            this.btn_add.TabIndex = 24;
+            this.btn_add.Text = "Add Route";
+            this.btn_add.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txt_cost
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(161, 322);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(63, 23);
-            this.textBox3.TabIndex = 22;
+            this.txt_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cost.Location = new System.Drawing.Point(161, 322);
+            this.txt_cost.Name = "txt_cost";
+            this.txt_cost.Size = new System.Drawing.Size(63, 23);
+            this.txt_cost.TabIndex = 22;
             // 
-            // textBox1
+            // txt_housing_loc
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(161, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 23);
-            this.textBox1.TabIndex = 20;
+            this.txt_housing_loc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_housing_loc.Location = new System.Drawing.Point(161, 200);
+            this.txt_housing_loc.Name = "txt_housing_loc";
+            this.txt_housing_loc.Size = new System.Drawing.Size(143, 23);
+            this.txt_housing_loc.TabIndex = 20;
             // 
             // label4
             // 
@@ -130,23 +130,23 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Housing Location";
             // 
-            // dateTimePicker2
+            // date_out
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(161, 281);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(106, 23);
-            this.dateTimePicker2.TabIndex = 32;
+            this.date_out.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_out.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.date_out.Location = new System.Drawing.Point(161, 281);
+            this.date_out.Name = "date_out";
+            this.date_out.Size = new System.Drawing.Size(106, 23);
+            this.date_out.TabIndex = 32;
             // 
-            // dateTimePicker1
+            // date_in
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(161, 238);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(106, 23);
-            this.dateTimePicker1.TabIndex = 31;
+            this.date_in.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_in.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.date_in.Location = new System.Drawing.Point(161, 238);
+            this.date_in.Name = "date_in";
+            this.date_in.Size = new System.Drawing.Size(106, 23);
+            this.date_in.TabIndex = 31;
             // 
             // label1
             // 
@@ -182,17 +182,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 465);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.date_out);
+            this.Controls.Add(this.date_in);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmb_id);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_close);
+            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.txt_cost);
+            this.Controls.Add(this.txt_housing_loc);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Name = "frm_housing";
@@ -205,17 +205,17 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmb_id;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.TextBox txt_cost;
+        private System.Windows.Forms.TextBox txt_housing_loc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker date_out;
+        private System.Windows.Forms.DateTimePicker date_in;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
