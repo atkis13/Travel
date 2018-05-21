@@ -160,10 +160,11 @@ namespace Travel
         public static int getEstExpense(string id)
         {
             int total = 0;
-            string query = "Select * FROM cost;";
+            string query = "Select * FROM cost WHERE id_travel =@id;";
             conn = new DBConnection();
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
             MySqlDataReader red = cmd.ExecuteReader();
             while (red.Read())
             {
@@ -174,6 +175,25 @@ namespace Travel
             conn.Close();
             return total;
         }
+
+        public static int getPeople(string id)
+        {
+            int people = 0;
+            string query = "Select * FROM destinations WHERE travel_id =@id;";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                people = red.GetInt32("no_ppl");               
+            }
+            conn.Close();
+            return people;
+
+        }
+
 
         
     }

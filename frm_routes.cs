@@ -13,6 +13,7 @@ namespace Travel
     public partial class frm_routes : Form
     {
         int total = 0;
+        bool flag = false;
         public frm_routes()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Travel
                
         private void btn_add1_Click(object sender, EventArgs e)
         {
+            flag = true;
             Form_Methods.AddRoutes(comb_id.Text, txt_from.Text, txt_to.Text, txt_via.Text,Int32.Parse(txt_transp_cost.Text), ck_return);
             if (ck_return.Checked)
             {
@@ -34,19 +36,28 @@ namespace Travel
             {
                 total += (Int32.Parse(txt_transp_cost.Text) *2);
             }
-            MessageBox.Show(total.ToString());
+            //MessageBox.Show(total.ToString());
             //Form_Methods.AddSpending(comb_id.Text, Int32.Parse(txt_transp_cost.Text), "transport");
         }
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            if (total == 0)
+            if (total == 0 && flag == false)
             {
+                
                 this.Close();
+            }
+
+            else if (total == 0 && flag == true)
+            {
+                Form_Methods.AddSpending(comb_id.Text, 0, "transport");
+                this.Close();
+
             }
             else
             {
-                Form_Methods.AddSpending(comb_id.Text, total, "transport");
+                int big_total = total * Form_Methods.getPeople(comb_id.Text);
+                Form_Methods.AddSpending(comb_id.Text, big_total, "transport");
                 this.Close();
             }
         }

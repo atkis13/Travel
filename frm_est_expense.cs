@@ -28,5 +28,10 @@ namespace Travel
             lbl_est.Text =  Form_Methods.getEstExpense(cmb_id.Text).ToString();
 
         }
+
+        private void btn_add_est_Click(object sender, EventArgs e)
+        {
+            Form_Methods.AddSpending(cmb_id.Text, Int32.Parse(lbl_est.Text), "total_est");
+        }
     }
 }

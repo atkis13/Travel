@@ -74,6 +74,7 @@
             this.btn_add_est.TabIndex = 3;
             this.btn_add_est.Text = "Add Estimate";
             this.btn_add_est.UseVisualStyleBackColor = true;
+            this.btn_add_est.Click += new System.EventHandler(this.btn_add_est_Click);
             // 
             // frm_est_expense
             // 
