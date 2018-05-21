@@ -106,6 +106,7 @@
             this.btn_add.TabIndex = 5;
             this.btn_add.Text = "Add Destination";
             this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // label5
             // 

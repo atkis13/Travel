@@ -24,5 +24,34 @@ namespace Travel
         {
             Application.Exit();
         }
+
+        private void addDestinationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_add_dest addform = new frm_add_dest();
+            addform.MdiParent = this;
+            addform.Show();
+        }
+
+        private void addRoutesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_routes addroutes = new frm_routes();
+            addroutes.MdiParent = this;
+            addroutes.Show();
+
+        }
+
+        private void addHousingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_housing addhousing = new frm_housing();
+            addhousing.MdiParent = this;
+            addhousing.Show();
+        }
+
+        private void addCostToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_est_expense exp = new frm_est_expense();
+            exp.MdiParent = this;
+            exp.Show();
+        }
     }
 }

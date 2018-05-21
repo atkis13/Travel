@@ -83,6 +83,7 @@
             this.btn_close.TabIndex = 25;
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // btn_add
             // 
@@ -93,6 +94,7 @@
             this.btn_add.TabIndex = 24;
             this.btn_add.Text = "Add Route";
             this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // txt_cost
             // 

@@ -28,7 +28,7 @@ namespace Travel
             loadData();
 
 
-            string mycons = "SERVER=" + server + ";PORT=3306;DATABASE=pc_diag;UID=Ati;PASSWORD=test;SslMode=none";
+            string mycons = "SERVER=" + server + ";PORT=3306;DATABASE=travel;UID=Ati;PASSWORD=test;SslMode=none";
             connect = new MySqlConnection(mycons);
         }
 

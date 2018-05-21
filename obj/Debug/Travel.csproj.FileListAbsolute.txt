@@ -18,3 +18,4 @@ E:\Git\Travel\Travel\obj\Debug\Travel.frm_complete.resources
 E:\Git\Travel\Travel\obj\Debug\Travel.frm_housing.resources
 E:\Git\Travel\Travel\obj\Debug\Travel.frm_routes.resources
 E:\Git\Travel\Travel\obj\Debug\Travel.frm_view.resources
+E:\Git\Travel\Travel\obj\Debug\Travel.frm_est_expense.resources

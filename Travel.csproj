@@ -72,6 +72,12 @@
     <Compile Include="frm_complete.Designer.cs">
       <DependentUpon>frm_complete.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_est_expense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_est_expense.Designer.cs">
+      <DependentUpon>frm_est_expense.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_housing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_complete.resx">
       <DependentUpon>frm_complete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_est_expense.resx">
+      <DependentUpon>frm_est_expense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_housing.resx">
       <DependentUpon>frm_housing.cs</DependentUpon>
