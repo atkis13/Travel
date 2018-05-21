@@ -53,5 +53,13 @@ namespace Travel
             exp.MdiParent = this;
             exp.Show();
         }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_view view = new frm_view();
+            view.MdiParent = this;
+            view.Show();
+
+        }
     }
 }

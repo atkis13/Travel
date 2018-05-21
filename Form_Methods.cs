@@ -194,6 +194,118 @@ namespace Travel
 
         }
 
+        public static void loadDest(string id,Label loc, Label start, Label end, Label startloc, Label noofppl, Label notes)
+        {
+            string query = "Select * FROM destinations WHERE travel_id =@id;";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                loc.Text = red.GetString("destinations");
+                start.Text = red.GetString("date_start");
+                end.Text = red.GetString("date_end");
+                startloc.Text = red.GetString("start_location");
+                noofppl.Text = red.GetInt32("no_ppl").ToString();
+                notes.Text = red.GetString("notes");
+            }
+            conn.Close();
+
+        }
+
+        public static void loadHousing(string id, Label lbl)
+        {
+            lbl.Text = null;
+            string query = "Select * FROM housings WHERE travel_id =@id;";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                lbl.Text += "Location: " + red.GetString("housing_location")  + "\n" + "Check In: " + red.GetString("in_date") + "\n" + "Check Out: " + red.GetString("out_date") + "\n" + "Nights: " + red.GetInt32("total_nights").ToString() + "\n" + "Cost per Night: " + red.GetInt32("cost_night").ToString() +"\n--------------------------\n" ;
+            }
+            conn.Close();
+
+        }
+
+        public static void loadRoutes(string id, Label lbl)
+        {
+            lbl.Text = null;
+            string query = "Select * FROM routes WHERE id_travel =@id;";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                lbl.Text += "From: " + red.GetString("from_d") + "\n" + "To: " + red.GetString("to_d") + "\n" + "By: " + red.GetString("by_d") + "\n" + "Cost per Person: " + red.GetInt32("cost_per_person").ToString()+ "\n" + "Return: " + red.GetString("return_t") + "\n--------------------------\n";
+            }
+            conn.Close();
+
+        }
+
+        public static bool isCompleted(string id)
+        {
+            bool flag = false;
+            string query = "Select * FROM routes WHERE id_travel =@id;";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                if(red.GetString("completed") == "true")
+                {
+                    flag = true;
+                }
+                else
+                {
+                    flag = false;
+                }
+                
+            }
+            return flag;
+        }
+
+        public static void getCosts(string id, Label housing, Label transp, Label spending, Label total,string type)
+        {   
+                       
+            string query = "Select * FROM cost WHERE id_travel =@id;";          
+           
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                if(type == "estimate")
+                {
+                    housing.Text = red.GetInt32("est_total_housing").ToString();
+                    transp.Text = red.GetString("est_total_transp");
+                    spending.Text = red.GetString("estimate_spending");
+                    total.Text = red.GetString("estimate_total");
+                }
+                else if(type == "actual")
+                {
+                    housing.Text = red.GetInt32("act_total_housing").ToString();
+                    transp.Text = red.GetString("act_total_transp");
+                    spending.Text = red.GetString("actual_spending");
+                    total.Text = red.GetString("actual_total");
+                }
+                
+                
+            }
+            conn.Close();
+
+        }       
+
 
         
     }
