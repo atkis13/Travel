@@ -18,6 +18,7 @@ namespace Travel
         {
             InitializeComponent();
             Form_Methods.GetIDs(comb_id);
+            pictureBox1.Image = Resource1._2_2;
             txt_via.Items.Add("Bus");
             txt_via.Items.Add("Train");
             txt_via.Items.Add("Plane");

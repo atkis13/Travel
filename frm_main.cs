@@ -61,5 +61,19 @@ namespace Travel
             view.Show();
 
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_about ab = new frm_about();
+            ab.MdiParent = this;
+            ab.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_complete cm = new frm_complete();
+            cm.MdiParent = this;
+            cm.Show();
+        }
     }
 }

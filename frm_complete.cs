@@ -15,6 +15,18 @@ namespace Travel
         public frm_complete()
         {
             InitializeComponent();
+            pictureBox1.Image = Resource1._3;
+            Form_Methods.GetIDs(cmb_id);
+        }
+
+        private void btn_done_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

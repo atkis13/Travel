@@ -67,10 +67,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(158, 47);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 17);
+            this.label5.Size = new System.Drawing.Size(121, 24);
             this.label5.TabIndex = 26;
             this.label5.Text = "Add Housing";
             // 
@@ -107,7 +107,7 @@
             // txt_housing_loc
             // 
             this.txt_housing_loc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_housing_loc.Location = new System.Drawing.Point(161, 200);
+            this.txt_housing_loc.Location = new System.Drawing.Point(161, 193);
             this.txt_housing_loc.Name = "txt_housing_loc";
             this.txt_housing_loc.Size = new System.Drawing.Size(143, 23);
             this.txt_housing_loc.TabIndex = 20;
@@ -126,7 +126,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 203);
+            this.label2.Location = new System.Drawing.Point(27, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 17);
             this.label2.TabIndex = 16;
@@ -174,7 +174,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(381, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(281, 469);
+            this.pictureBox1.Size = new System.Drawing.Size(281, 455);
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
@@ -182,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 465);
+            this.ClientSize = new System.Drawing.Size(663, 453);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.date_out);
             this.Controls.Add(this.date_in);
@@ -198,7 +198,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Name = "frm_housing";
-            this.Text = "frm_housing";
+            this.Text = "Add Housing";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

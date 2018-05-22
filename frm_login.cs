@@ -16,6 +16,7 @@ namespace Travel
         public frm_login()
         {
             InitializeComponent();
+            pictureBox1.Image = Resource1._6;
         }
 
         private void btn_login_Click(object sender, EventArgs e)

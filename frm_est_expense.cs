@@ -26,6 +26,7 @@ namespace Travel
         private void btn_est_Click(object sender, EventArgs e)
         {
             lbl_est.Text =  Form_Methods.getEstExpense(cmb_id.Text).ToString();
+            lbl_est.Visible = true;
 
         }
 

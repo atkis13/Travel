@@ -64,6 +64,7 @@
             this.lbl_est.Size = new System.Drawing.Size(46, 17);
             this.lbl_est.TabIndex = 2;
             this.lbl_est.Text = "label1";
+            this.lbl_est.Visible = false;
             // 
             // btn_add_est
             // 
@@ -86,7 +87,7 @@
             this.Controls.Add(this.btn_est);
             this.Controls.Add(this.cmb_id);
             this.Name = "frm_est_expense";
-            this.Text = "frm_est_expense";
+            this.Text = "Estimate Expense";
             this.ResumeLayout(false);
             this.PerformLayout();
 

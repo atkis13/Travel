@@ -30,6 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.destinationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1509, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1509, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,21 +62,29 @@
             this.viewToolStripMenuItem,
             this.exitToolStripMenuItem,
             this.exitToolStripMenuItem1});
-            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 23);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.exitToolStripMenuItem.Text = "Complete Travel";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -87,36 +95,36 @@
             this.addRoutesToolStripMenuItem,
             this.addHousingToolStripMenuItem,
             this.addCostToolStripMenuItem});
-            this.destinationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.destinationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.destinationToolStripMenuItem.Name = "destinationToolStripMenuItem";
-            this.destinationToolStripMenuItem.Size = new System.Drawing.Size(91, 23);
+            this.destinationToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.destinationToolStripMenuItem.Text = "Destination";
             // 
             // addDestinationToolStripMenuItem
             // 
             this.addDestinationToolStripMenuItem.Name = "addDestinationToolStripMenuItem";
-            this.addDestinationToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
+            this.addDestinationToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addDestinationToolStripMenuItem.Text = "Add destination";
             this.addDestinationToolStripMenuItem.Click += new System.EventHandler(this.addDestinationToolStripMenuItem_Click);
             // 
             // addRoutesToolStripMenuItem
             // 
             this.addRoutesToolStripMenuItem.Name = "addRoutesToolStripMenuItem";
-            this.addRoutesToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
+            this.addRoutesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addRoutesToolStripMenuItem.Text = "Add Routes";
             this.addRoutesToolStripMenuItem.Click += new System.EventHandler(this.addRoutesToolStripMenuItem_Click);
             // 
             // addHousingToolStripMenuItem
             // 
             this.addHousingToolStripMenuItem.Name = "addHousingToolStripMenuItem";
-            this.addHousingToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
+            this.addHousingToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addHousingToolStripMenuItem.Text = "Add Housing";
             this.addHousingToolStripMenuItem.Click += new System.EventHandler(this.addHousingToolStripMenuItem_Click);
             // 
             // addCostToolStripMenuItem
             // 
             this.addCostToolStripMenuItem.Name = "addCostToolStripMenuItem";
-            this.addCostToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
+            this.addCostToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addCostToolStripMenuItem.Text = "Estimate Expense";
             this.addCostToolStripMenuItem.Click += new System.EventHandler(this.addCostToolStripMenuItem_Click);
             // 
@@ -124,16 +132,17 @@
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
-            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 23);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -142,13 +151,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(1509, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
-            this.viewToolStripMenuItem.Text = "View";
-            this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
             // frm_main
             // 

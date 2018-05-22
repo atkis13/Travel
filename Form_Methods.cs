@@ -103,11 +103,17 @@ namespace Travel
             //add housing to database
         }
 
-        public static void CompleteTravel()
+        public static void CompleteTravel(string id)
         {
-            //update the destinations table comleteed to true
-            //add the actual costs to the cost table
-            
+            string query = "UPDATE destinations SET completed =@completed WHERE travel_id =@id);";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@completed", "true");
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
         }
 
         
@@ -304,7 +310,12 @@ namespace Travel
             }
             conn.Close();
 
-        }       
+        }
+        
+        public static void AddActualCost(string id, int actual_transp, int act_housing, int act_spending, int act_total)
+        {
+
+        }
 
 
         

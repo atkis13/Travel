@@ -18,6 +18,7 @@ namespace Travel
         {
             InitializeComponent();
             Form_Methods.GetIDs(cmb_id);
+            pictureBox1.Image = Resource1._1;
         }
 
         private void btn_add_Click(object sender, EventArgs e)

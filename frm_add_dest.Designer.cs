@@ -53,7 +53,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(346, 623);
+            this.pictureBox1.Size = new System.Drawing.Size(346, 581);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -100,7 +100,7 @@
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(491, 555);
+            this.btn_add.Location = new System.Drawing.Point(490, 520);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(120, 26);
             this.btn_add.TabIndex = 5;
@@ -111,10 +111,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(539, 52);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(528, 37);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 17);
+            this.label5.Size = new System.Drawing.Size(186, 24);
             this.label5.TabIndex = 6;
             this.label5.Text = "Add New Destination";
             // 
@@ -174,7 +174,7 @@
             // btn_close
             // 
             this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(632, 555);
+            this.btn_close.Location = new System.Drawing.Point(632, 520);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(93, 26);
             this.btn_close.TabIndex = 17;
@@ -222,7 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 623);
+            this.ClientSize = new System.Drawing.Size(870, 581);
             this.Controls.Add(this.txt_no_person);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_spending);
@@ -242,7 +242,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frm_add_dest";
-            this.Text = "frm_add_dest";
+            this.Text = "Add New Destination";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

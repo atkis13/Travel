@@ -16,7 +16,8 @@ namespace Travel
         string filePath;
         public frm_add_dest()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            pictureBox1.Image = Resource1._4;
         }
 
         private void button2_Click(object sender, EventArgs e)
