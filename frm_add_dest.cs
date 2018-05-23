@@ -27,12 +27,26 @@ namespace Travel
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            string mainID = Form_Methods.GenerateID(txt_dest.Text, date_start);
-            filePath = Application.StartupPath + @"\\images\" + mainID;
-            Directory.CreateDirectory(filePath);
-            Form_Methods.AddID(mainID);
-            Form_Methods.AddDestination(mainID, txt_dest.Text, date_start.Text, date_end.Text, txt_start_loc.Text, txt_no_person.Text, txt_note.Text, Int32.Parse(txt_spending.Text));
-            Form_Methods.AddSpending(mainID, Int32.Parse(txt_spending.Text), "spending");
+            try
+            {
+                string mainID = Form_Methods.GenerateID(txt_dest.Text, date_start);
+                filePath = Application.StartupPath + @"\\images\" + mainID;
+                Directory.CreateDirectory(filePath);
+                Form_Methods.AddID(mainID);
+                Form_Methods.AddDestination(mainID, txt_dest.Text, date_start.Text, date_end.Text, txt_start_loc.Text, txt_no_person.Text, txt_note.Text, Int32.Parse(txt_spending.Text));
+                Form_Methods.AddSpending(mainID, Int32.Parse(txt_spending.Text), "spending");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            MessageBox.Show("New Destination Added");
+            txt_dest.Text = "";
+            txt_start_loc.Text = "";
+            txt_no_person.Text = "";
+            txt_note.Text = "";
         }
     }
 }

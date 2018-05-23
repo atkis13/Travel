@@ -93,6 +93,7 @@
             this.lbl_routes.Size = new System.Drawing.Size(46, 17);
             this.lbl_routes.TabIndex = 3;
             this.lbl_routes.Text = "label4";
+            this.lbl_routes.Visible = false;
             // 
             // lbl_housing
             // 
@@ -103,6 +104,7 @@
             this.lbl_housing.Size = new System.Drawing.Size(46, 17);
             this.lbl_housing.TabIndex = 6;
             this.lbl_housing.Text = "label7";
+            this.lbl_housing.Visible = false;
             // 
             // label8
             // 
@@ -253,6 +255,7 @@
             this.label21.Size = new System.Drawing.Size(84, 17);
             this.label21.TabIndex = 33;
             this.label21.Text = "Grand Total";
+            this.label21.Visible = false;
             // 
             // label22
             // 
@@ -263,6 +266,7 @@
             this.label22.Size = new System.Drawing.Size(114, 17);
             this.label22.TabIndex = 32;
             this.label22.Text = "Spending Money";
+            this.label22.Visible = false;
             // 
             // label23
             // 
@@ -273,6 +277,7 @@
             this.label23.Size = new System.Drawing.Size(141, 17);
             this.label23.TabIndex = 31;
             this.label23.Text = "Total Transportation ";
+            this.label23.Visible = false;
             // 
             // label24
             // 
@@ -283,6 +288,7 @@
             this.label24.Size = new System.Drawing.Size(96, 17);
             this.label24.TabIndex = 30;
             this.label24.Text = "Total Housing";
+            this.label24.Visible = false;
             // 
             // label27
             // 
@@ -313,6 +319,7 @@
             this.txt_no_pers.Size = new System.Drawing.Size(102, 17);
             this.txt_no_pers.TabIndex = 41;
             this.txt_no_pers.Text = "No. of Persons";
+            this.txt_no_pers.Visible = false;
             // 
             // txt_notes
             // 
@@ -323,6 +330,7 @@
             this.txt_notes.Size = new System.Drawing.Size(45, 17);
             this.txt_notes.TabIndex = 40;
             this.txt_notes.Text = "Notes";
+            this.txt_notes.Visible = false;
             // 
             // txt_start_loc
             // 
@@ -333,6 +341,7 @@
             this.txt_start_loc.Size = new System.Drawing.Size(96, 17);
             this.txt_start_loc.TabIndex = 39;
             this.txt_start_loc.Text = "Start Location";
+            this.txt_start_loc.Visible = false;
             // 
             // txt_end_date
             // 
@@ -343,6 +352,7 @@
             this.txt_end_date.Size = new System.Drawing.Size(67, 17);
             this.txt_end_date.TabIndex = 38;
             this.txt_end_date.Text = "End Date";
+            this.txt_end_date.Visible = false;
             // 
             // txt_start_date
             // 
@@ -353,6 +363,7 @@
             this.txt_start_date.Size = new System.Drawing.Size(72, 17);
             this.txt_start_date.TabIndex = 37;
             this.txt_start_date.Text = "Start Date";
+            this.txt_start_date.Visible = false;
             // 
             // txt_dest
             // 
@@ -363,6 +374,7 @@
             this.txt_dest.Size = new System.Drawing.Size(79, 17);
             this.txt_dest.TabIndex = 36;
             this.txt_dest.Text = "Destination";
+            this.txt_dest.Visible = false;
             // 
             // lbl_est_total
             // 
@@ -373,6 +385,7 @@
             this.lbl_est_total.Size = new System.Drawing.Size(84, 17);
             this.lbl_est_total.TabIndex = 47;
             this.lbl_est_total.Text = "Grand Total";
+            this.lbl_est_total.Visible = false;
             // 
             // lbl_est_spending
             // 
@@ -383,6 +396,7 @@
             this.lbl_est_spending.Size = new System.Drawing.Size(114, 17);
             this.lbl_est_spending.TabIndex = 46;
             this.lbl_est_spending.Text = "Spending Money";
+            this.lbl_est_spending.Visible = false;
             // 
             // lbl_est_trans
             // 
@@ -393,6 +407,7 @@
             this.lbl_est_trans.Size = new System.Drawing.Size(141, 17);
             this.lbl_est_trans.TabIndex = 45;
             this.lbl_est_trans.Text = "Total Transportation ";
+            this.lbl_est_trans.Visible = false;
             // 
             // lbl_est_housing
             // 
@@ -403,6 +418,7 @@
             this.lbl_est_housing.Size = new System.Drawing.Size(96, 17);
             this.lbl_est_housing.TabIndex = 44;
             this.lbl_est_housing.Text = "Total Housing";
+            this.lbl_est_housing.Visible = false;
             // 
             // lbl_act_total
             // 
@@ -413,6 +429,7 @@
             this.lbl_act_total.Size = new System.Drawing.Size(84, 17);
             this.lbl_act_total.TabIndex = 53;
             this.lbl_act_total.Text = "Grand Total";
+            this.lbl_act_total.Visible = false;
             // 
             // lbl_act_spending
             // 
@@ -423,6 +440,7 @@
             this.lbl_act_spending.Size = new System.Drawing.Size(114, 17);
             this.lbl_act_spending.TabIndex = 52;
             this.lbl_act_spending.Text = "Spending Money";
+            this.lbl_act_spending.Visible = false;
             // 
             // lbl_act_trans
             // 
@@ -433,6 +451,7 @@
             this.lbl_act_trans.Size = new System.Drawing.Size(141, 17);
             this.lbl_act_trans.TabIndex = 51;
             this.lbl_act_trans.Text = "Total Transportation ";
+            this.lbl_act_trans.Visible = false;
             // 
             // lbl_act_housing
             // 
@@ -443,6 +462,7 @@
             this.lbl_act_housing.Size = new System.Drawing.Size(96, 17);
             this.lbl_act_housing.TabIndex = 50;
             this.lbl_act_housing.Text = "Total Housing";
+            this.lbl_act_housing.Visible = false;
             // 
             // btn_load
             // 
@@ -516,6 +536,7 @@
             this.lbl_balance.Size = new System.Drawing.Size(78, 24);
             this.lbl_balance.TabIndex = 61;
             this.lbl_balance.Text = "Balance";
+            this.lbl_balance.Visible = false;
             // 
             // label4
             // 
@@ -536,6 +557,7 @@
             this.label6.Size = new System.Drawing.Size(62, 24);
             this.label6.TabIndex = 65;
             this.label6.Text = "Actual";
+            this.label6.Visible = false;
             // 
             // pic_6
             // 

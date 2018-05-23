@@ -17,6 +17,14 @@ namespace Travel
         public frm_routes()
         {
             InitializeComponent();
+            //try
+            //{
+
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
             Form_Methods.GetIDs(comb_id);
             pictureBox1.Image = Resource1._2_2;
             txt_via.Items.Add("Bus");
@@ -27,18 +35,32 @@ namespace Travel
                
         private void btn_add1_Click(object sender, EventArgs e)
         {
-            flag = true;
-            Form_Methods.AddRoutes(comb_id.Text, txt_from.Text, txt_to.Text, txt_via.Text,Int32.Parse(txt_transp_cost.Text), ck_return);
-            if (ck_return.Checked)
+            try
             {
-                total += Int32.Parse(txt_transp_cost.Text);
+                flag = true;
+                Form_Methods.AddRoutes(comb_id.Text, txt_from.Text, txt_to.Text, txt_via.Text, Int32.Parse(txt_transp_cost.Text), ck_return);
+                if (ck_return.Checked)
+                {
+                    total += Int32.Parse(txt_transp_cost.Text);
+                }
+                else
+                {
+                    total += (Int32.Parse(txt_transp_cost.Text) * 2);
+                }
+                MessageBox.Show("Route Added");
+                txt_from.Text = "";
+                txt_to.Text = "";
+                txt_via.Text = "";
+                txt_transp_cost.Text = "";
+                ck_return.Checked = false;
+
             }
-            else
+            catch (Exception ex)
             {
-                total += (Int32.Parse(txt_transp_cost.Text) *2);
+                MessageBox.Show(ex.Message);
             }
-            //MessageBox.Show(total.ToString());
-            //Form_Methods.AddSpending(comb_id.Text, Int32.Parse(txt_transp_cost.Text), "transport");
+            
+            
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -51,15 +73,32 @@ namespace Travel
 
             else if (total == 0 && flag == true)
             {
-                Form_Methods.AddSpending(comb_id.Text, 0, "transport");
+                try
+                {
+                    Form_Methods.AddSpending(comb_id.Text, 0, "transport");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
                 this.Close();
 
             }
             else
             {
-                int big_total = total * Form_Methods.getPeople(comb_id.Text);
-                Form_Methods.AddSpending(comb_id.Text, big_total, "transport");
+                try
+                {
+                    int big_total = total * Form_Methods.getPeople(comb_id.Text);
+                    Form_Methods.AddSpending(comb_id.Text, big_total, "transport");
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
                 this.Close();
+
             }
         }
     }

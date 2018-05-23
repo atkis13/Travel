@@ -15,7 +15,15 @@ namespace Travel
         public frm_est_expense()
         {
             InitializeComponent();
-            Form_Methods.GetIDs(cmb_id);
+            try
+            {
+                Form_Methods.GetIDs(cmb_id);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void cmb_id_SelectedIndexChanged(object sender, EventArgs e)
@@ -25,14 +33,33 @@ namespace Travel
 
         private void btn_est_Click(object sender, EventArgs e)
         {
-            lbl_est.Text =  Form_Methods.getEstExpense(cmb_id.Text).ToString();
+            try
+            {
+                lbl_est.Text = Form_Methods.getEstExpense(cmb_id.Text).ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             lbl_est.Visible = true;
 
         }
 
         private void btn_add_est_Click(object sender, EventArgs e)
         {
-            Form_Methods.AddSpending(cmb_id.Text, Int32.Parse(lbl_est.Text), "total_est");
+            try
+            {
+                Form_Methods.AddSpending(cmb_id.Text, Int32.Parse(lbl_est.Text), "total_est");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            MessageBox.Show("Estimations Added");
         }
-    }
+
+    }  
+
 }

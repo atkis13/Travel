@@ -17,15 +17,34 @@ namespace Travel
         public frm_housing()
         {
             InitializeComponent();
-            Form_Methods.GetIDs(cmb_id);
+            try
+            {
+                Form_Methods.GetIDs(cmb_id);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
             pictureBox1.Image = Resource1._1;
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            flag = true;
-            Form_Methods.AddHousing(cmb_id.Text, txt_housing_loc.Text, date_in, date_out, Int32.Parse(txt_cost.Text));
-            total += (date_out.Value.Day - date_in.Value.Day) * Int32.Parse(txt_cost.Text);
+            try
+            {
+                flag = true;
+                Form_Methods.AddHousing(cmb_id.Text, txt_housing_loc.Text, date_in, date_out, Int32.Parse(txt_cost.Text));
+                total += (date_out.Value.Day - date_in.Value.Day) * Int32.Parse(txt_cost.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            MessageBox.Show("Housing Added");
+            txt_housing_loc.Text = "";
+            txt_cost.Text = "";
+            
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -36,12 +55,28 @@ namespace Travel
             }
             else if (total == 0 && flag == true)
             {
-                Form_Methods.AddSpending(cmb_id.Text, 0, "housing");
+                try
+                {
+                    Form_Methods.AddSpending(cmb_id.Text, 0, "housing");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+               
                 this.Close();
             }
             else
             {
-                Form_Methods.AddSpending(cmb_id.Text, total, "housing");
+                try
+                {
+                    Form_Methods.AddSpending(cmb_id.Text, total, "housing");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
                 this.Close();
             }
            

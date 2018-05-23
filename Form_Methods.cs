@@ -39,7 +39,7 @@ namespace Travel
         public static void AddDestination(string id, string dest, string date_start, string date_end, string start_loc, string ppl, string notes, int s_money)
         {
             //Add the data from the add form to the destinations table
-            string query = "INSERT INTO destinations(travel_id, destinations, date_start, date_end, start_location, no_ppl, notes, spending_money, completed) VALUES(@id, @dest, @date_start, @date_end, @start_loc, @ppl, @notes, @s_money, @completed);";
+            string query = "INSERT INTO destinations(travel_id, destinations, date_start, date_end, start_location, no_ppl, notes, spending_money, iscompleted) VALUES(@id, @dest, @date_start, @date_end, @start_loc, @ppl, @notes, @s_money, @completed);";
             conn = new DBConnection();
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
@@ -105,7 +105,7 @@ namespace Travel
 
         public static void CompleteTravel(string id)
         {
-            string query = "UPDATE destinations SET completed =@completed WHERE travel_id =@id);";
+            string query = "UPDATE destinations SET iscompleted =@completed WHERE travel_id =@id;";
             conn = new DBConnection();
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
@@ -258,7 +258,7 @@ namespace Travel
         public static bool isCompleted(string id)
         {
             bool flag = false;
-            string query = "Select * FROM routes WHERE id_travel =@id;";
+            string query = "Select * FROM destinations WHERE travel_id =@id;";
             conn = new DBConnection();
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
@@ -266,7 +266,7 @@ namespace Travel
             MySqlDataReader red = cmd.ExecuteReader();
             while (red.Read())
             {
-                if(red.GetString("completed") == "true")
+                if(red.GetString("iscompleted") == "true")
                 {
                     flag = true;
                 }
@@ -312,12 +312,73 @@ namespace Travel
 
         }
         
-        public static void AddActualCost(string id, int actual_transp, int act_housing, int act_spending, int act_total)
+        public static void AddActualCost(string id, int act_housing, int actual_transp, int act_spending, int act_total, int balance)
         {
+            string query = "UPDATE cost SET act_total_housing =@act_housing, act_total_transp =@act_trans, actual_spending =@act_spend, actual_total =@act_total, balance =@balance WHERE id_travel =@id;";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@act_housing", act_housing);            
+            cmd.Parameters.AddWithValue("@act_trans", actual_transp);
+            cmd.Parameters.AddWithValue("@act_spend", act_spending);
+            cmd.Parameters.AddWithValue("@act_total", act_total);
+            cmd.Parameters.AddWithValue("@balance", balance);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+        }
+
+        public static int getTotalEstimate(string id)
+        {
+            int estimate = 0;
+            string query = "Select * FROM cost WHERE id_travel =@id;";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                estimate = red.GetInt32("estimate_total");
+
+            }
+            return estimate;
+
+        }
+
+        public static void AddBalance(string id, int balance)
+        {
+            string query = "UPDATE cost SET balance =@balance WHERE id_travel =@id;";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@balance", balance);            
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+        }
+
+        public static void getBalance (string id, Label lb)
+        {
+            
+            string query = "Select * FROM cost WHERE id_travel =@id;";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                lb.Text = red.GetInt32("balance").ToString();
+
+            }
+            
 
         }
 
 
-        
+
     }
 }
